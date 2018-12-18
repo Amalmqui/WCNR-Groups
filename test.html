@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+    text-align: left;
+    font-family: 'proxima-nova', sans-serif;
+    background: white;
+    background-size: cover;
+  }
+  .header {
+    overflow hidden;
+    background-color: #1E4D2B;
+    padding: 20px 10px
+  }
+  .header h1 {
+    color: white;
+  }
+  .header p {
+    color: white;
+  }
+  input[type=text]:focus {
+      background-color: lightblue;
+  }
+
+  input[type=submit] {
+    background-color: #59595B;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  .form {
+  padding: 10px;
+  }
+  </style>
+</head>
+
+<body>
+<div class="header">
+  <h1>WCNR Groups</h1>
+  <p>This page can be used to check who is a member of a filesystem group in the Warner College of Natural Resources.</p>
+</div>
+
+<div class="form">
+    <form>
+        <label for="gname">Group Name</label>
+        <input type="text" id="gname" name="gname">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<div class="form">
+    <form>
+        <label for="uname">Username</label>
+        <input type="text" id="uname" name="uname">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+
+</html>

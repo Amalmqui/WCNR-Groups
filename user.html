@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+    text-align: left;
+    font-family: 'proxima-nova', sans-serif;
+    background: white;
+    background-size: cover;
+    width: 100%;
+  }
+  .header {
+    overflow hidden;
+    background-color: #1E4D2B;
+    padding: 20px;
+    padding-right: 20px;
+  }
+  .header h1 {
+    color: white;
+  }
+  .header p {
+    color: white;
+  }
+  input[type=text]:focus {
+      background-color: lightblue;
+  }
+
+  input[type=submit] {
+    background-color: #59595B;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  .form {
+  padding: 10px;
+  }
+
+  .table {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .table td:hover {
+    background-color: lightblue;
+  }
+
+  .table td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table th {
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+
+  </style>
+</head>
+
+<body>
+<div class="header">
+  <h1>WCNR Groups</h1>
+  <p>This page can be used to check who is a member of a filesystem group in the Warner College of Natural Resources.</p>
+</div>
+
+<div class="form">
+  <form>
+  <label for="gname">Group Name</label>
+  <input type="text" id="gname" name="gname">
+  <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div class="form">
+    <form>
+        <label for="uname">Username</label>
+        <input type="text" id="uname" name="uname">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<div class="table">
+    <table style="width: 96%;">
+        <th>Groups {{userName}} is in: </th>
+        {% for item in options %}
+            <tr>
+                <td>
+                    {{item}}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+
+</html>
