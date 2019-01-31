@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="static/StyleSheet.css">
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/StyleSheet.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-<div class="header">
-  <h1>WCNR Groups</h1>
-  <p>This page can be used to check who is a member of a filesystem group in the Warner College of Natural Resources.</p>
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+        <h1>WCNR Groups</h1>
+        <p>This page can be used to check who is a member of a filesystem group in the Warner College of Natural Resources.</p>
+    </div>
 </div>
 
-<div class="form">
-  <form>
+<div class="container-fluid">
+<form>
+<div class="form-group">
   <label for="gname">Group Name</label>
-  <input type="text" id="gname" name="gname">
-  <input type="submit" value="Submit">
-  </form>
+  <input type="text" class="form-control" id="gname" name="gname" placeholder="Enter a group name.">
+    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
 </div>
-
-<div class="form">
+</form>
+<p>OR</p>
     <form>
-        <label for="uname">Username</label>
-        <input type="text" id="uname" name="uname">
-        <input type="submit" value="Submit">
-    </form>
+<div class="form-group">
+    <label for="uname">Username</label>
+    <input type="text" class="form-control" id="uname" name="uname" placeholder="Enter a username.">
+    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+</div>
+</form>
 </div>
 
-<div class="table">
-    <table style="width: 96%;">
-        <th>Groups {{userName}} is in: </th>
-        {% for item in options %}
+<div class="container-fluid">
+    <table class="table table-responsive table-hover">
+        <th>Found {{matched|length}} groups {{userName}} is in:</th>
+        {% for item in matched %}
             <tr>
                 <td>
-                    {{item}}
+                    {{loop.index}} <a href="/?gname={{item}}">{{item}}</a>
                 </td>
             </tr>
         {% endfor %}

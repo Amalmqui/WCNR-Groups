@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="static/css/StyleSheet.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>WCNR Groups</h1>
+  <p>This page can be used to check who is a member of a filesystem group in the Warner College of Natural Resources.</p>
+</div>
+
+<div class="form">
+  <form>
+  <label for="gname">Group Name</label>
+  <input type="text" id="gname" name="gname">
+  <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div class="form">
+    <form>
+        <label for="uname">Username</label>
+        <input type="text" id="uname" name="uname">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<div class="table">
+    <table style="width: 96%;">
+        <th>Users in the group: {{groupName}} </th>
+        {% for item in options %}
+            <tr>
+                <td>
+                    {{item}}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

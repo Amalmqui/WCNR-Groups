@@ -16,8 +16,13 @@
     <div class="container-fluid">
         <div class="jumbotron jumbotron-fluid">
             <h1>WCNR Groups</h1>
-            <p>This page can be used to check who is a member of a filesystem group in the Warner College of Natural
-                Resources.</p>
+            <p>This page can be used to check who is a member of a filesystem group in the Warner College of Natural Resources.</p>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="alert alert-warning" role="alert">
+            Could not find.
         </div>
     </div>
 
@@ -43,19 +48,6 @@
                 <button type="submit" class="btn btn-primary btn-sm">Submit</button>
             </div>
         </form>
-    </div>
-
-    <div class="container-fluid">
-        <table class="table table-responsive table-hover">
-            <th>Found {{members|length}} users in the {{groupName}} group: </th>
-            {% for item in members %}
-            <tr>
-                <td>
-                    {{loop.index}} <a href="/?uname={{item}}">{{item}}</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </table>
     </div>
 
 </body>

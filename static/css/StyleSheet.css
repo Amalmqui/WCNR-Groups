@@ -48,3 +48,19 @@ body {
     border-bottom: 1px solid black;
     width: 100%;
   }
+
+  .container-fluid .jumbotron{
+    background-color: #1E4D2B;
+  }
+
+  .container-fluid .jumbotron h1{
+    color: white;
+  }
+
+  .container-fluid .jumbotron p{
+    color: white;
+  }
+
+  .btn-primary{
+    background-color: #59595B;
+  }
